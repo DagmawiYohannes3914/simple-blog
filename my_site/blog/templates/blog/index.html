@@ -1,9 +1,38 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {%block title%} My Blog {% endblock %} 
 
-{%block title%}
-    My Blog
-{% endblock %}
-
-{%block content %}
-    <h1>Welcome to my blog</h1>
+{%block content%}
+<header id="main-navigation">
+  <h1><a href="">Dagim's Blog</a></h1>
+  <nav>
+    <a href="">All Posts</a>
+  </nav>
+</header>
+<section id="welcome">
+  <header>
+    <img src="" alt="Dagim - The Author of the Blog" />
+    <h2>Dagim's Blog</h2>
+  </header>
+  <p>Hi, I am Dagim and I love to blog about django</p>
+</section>
+<section id="latest-posts">
+    <h2>My latest posts</h2>
+    <ul>
+        <li>
+            <article class="post">
+                <a href="">
+                    <img src="" alt="Mountain Hiking" />
+                    <div class="post__content">
+                        <h3>Mountain Hiking</h3>
+                        <p>There is nothing like the views when hicking in the mountains</p>
+                    </div>
+                </a>
+            </article>
+        </li>
+    </ul>
+</section>
+<section id="about">
+    <h2>What I do</h2>
+    <p>Django blog app</p>
+    <p>My goal is to grow my skills</p>
+</section>
 {% endblock %}
