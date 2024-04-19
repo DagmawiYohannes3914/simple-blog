@@ -7,19 +7,15 @@
   {% endblock %} 
 
   {% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}" />
     <link rel="stylesheet" href="{% static "blog/index.css" %}" />
   {% endblock %}
 
 {%block content%}
-<header id="main-navigation">
-  <h1><a href="">Dagim's Blog</a></h1>
-  <nav>
-    <a href="">All Posts</a>
-  </nav>
-</header>
+
 <section id="welcome">
   <header>
-    <img src="" alt="Dagim - The Author of the Blog" />
+    <img src="{% static "blog/images/dagim.jpeg" %}" alt="Dagim - The Author of the Blog" />
     <h2>Dagim's Blog</h2>
   </header>
   <p>Hi, I am Dagim and I love to blog about django</p>
@@ -27,17 +23,7 @@
 <section id="latest-posts">
     <h2>My latest posts</h2>
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <img src="" alt="Mountain Hiking" />
-                    <div class="post__content">
-                        <h3>Mountain Hiking</h3>
-                        <p>There is nothing like the views when hicking in the mountains</p>
-                    </div>
-                </a>
-            </article>
-        </li>
+      {% include "blog/includes/post.html" %}
     </ul>
 </section>
 <section id="about">
